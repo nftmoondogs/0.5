@@ -1,12 +1,13 @@
 "use client";
 
+import React, { useState } from 'react';
 import Image from "next/image";
 import Wrapper from "@/components/wrapper";
 import { Button } from "@/components/ui/button";
 
-import robot from "@/public/images/robot.png";
-
 export default function Home() {
+  const [imageSrc, setImageSrc] = useState("https://i.ibb.co/mJ2RwRn/1.png");
+
   return (
     <section className="flex flex-col lg:flex-row">
       <section className="flex h-screen w-full flex-col justify-between p-9 lg:h-auto">
@@ -18,10 +19,8 @@ export default function Home() {
               $0.5
             </span>
             <p className="pb-6 font-medium text-white">
-            Dive into a trust-based experiment designed to ensure fair distribution, faster bonding curve completion time  and eliminate whale domination. By participating with just 0.5 SOL or lower, you not only build trust within the project but this is the first step of a three-step wider strategy where those who stick to the rules will be rewarded. You may have noticed that most of the projects that fail have a weak distribution, we intend to combat this. Good luck and stay faithful.
+              Dive into a trust-based experiment designed to ensure fair distribution, faster bonding curve completion time and eliminate whale domination. By participating with just 0.5 SOL or lower, you not only build trust within the project but this is the first step of a three-step wider strategy where those who stick to the rules will be rewarded. You may have noticed that most of the projects that fail have a weak distribution, we intend to combat this. Good luck and stay faithful.
             </p>
-         
-
             <div className="">
               <Button size="xl" className="w-full font-bold" variant="brand">
                 <a
@@ -63,9 +62,16 @@ export default function Home() {
       </section>
 
       {/* second half */}
-
       <section className="hidden lg:flex h-screen w-full flex-col justify-center items-center bg-[#f1efe7] p-9">
-        <Image src={robot} alt="Man sitting in wheelchair" />
+        <div onMouseEnter={() => setImageSrc("https://i.ibb.co/LxgG86h/2.png")}
+             onMouseLeave={() => setImageSrc("https://i.ibb.co/mJ2RwRn/1.png")}>
+          <Image 
+            src={imageSrc} 
+            alt="Man sitting in wheelchair" 
+            width={720}
+            height={480} 
+            layout="responsive" />
+        </div>
       </section>
     </section>
   );
