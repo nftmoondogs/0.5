@@ -36,7 +36,7 @@ export default function Home() {
             <div className="pt-2">
               <Button size="xl" className="w-full font-bold" variant="brand">
                 <a
-                  href="https://pump.fun/board"
+                  href="https://t.me/zerofivecommunity"
                   target="_blank"
                   rel="noreferrer"
                   className="pb-1 dark:text-zinc-800 text-zinc-100"
@@ -48,7 +48,7 @@ export default function Home() {
             <div className="pt-2">
               <Button size="xl" className="w-full font-bold" variant="brand">
                 <a
-                  href="https://pump.fun/board"
+                  href="https://twitter.com/zerofivetoken"
                   target="_blank"
                   rel="noreferrer"
                   className="pb-1 dark:text-zinc-800 text-zinc-100"
